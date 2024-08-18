@@ -15,6 +15,9 @@ app.use(express.json());
 const authRoutes = require ('./routes/auth');
 app.use('/api/auth', authRoutes);
 
+const tweetRoutes = require('./routes/tweets')
+app.use('/api/tweets', tweetRoutes);
+
 //Mongoose DB connect
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
